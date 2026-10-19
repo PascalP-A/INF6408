@@ -1,0 +1,156 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Lee_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=fed56306e0b43cc270e6d75eb460b5f9}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fed56306e0b43cc270e6d75eb460b5f9}
+      \strng{fullhash}{fed56306e0b43cc270e6d75eb460b5f9}
+      \strng{fullhashraw}{fed56306e0b43cc270e6d75eb460b5f9}
+      \strng{bibnamehash}{fed56306e0b43cc270e6d75eb460b5f9}
+      \strng{authorbibnamehash}{fed56306e0b43cc270e6d75eb460b5f9}
+      \strng{authornamehash}{fed56306e0b43cc270e6d75eb460b5f9}
+      \strng{authorfullhash}{fed56306e0b43cc270e6d75eb460b5f9}
+      \strng{authorfullhashraw}{fed56306e0b43cc270e6d75eb460b5f9}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Number Analytics}
+      \field{month}{10}
+      \field{title}{Column-oriented databases 101}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.numberanalytics.com/blog/column-oriented-databases-ultimate-guide
+      \endverb
+      \verb{url}
+      \verb https://www.numberanalytics.com/blog/column-oriented-databases-ultimate-guide
+      \endverb
+    \endentry
+    \entry{Lemire_2026}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=1f6f9e460dc1dd070b39d99017deb2c5}{%
+           family={Lemire},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{fullhash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{fullhashraw}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{bibnamehash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{authorbibnamehash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{authornamehash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{authorfullhash}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \strng{authorfullhashraw}{1f6f9e460dc1dd070b39d99017deb2c5}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Semaine 5 - Indexation des données multidimensionnelles}
+      \field{month}{9}
+      \field{title}{Indexation des données multidimensionnelles}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://lemire.me/notesdecours/entrepot/semaine5.html
+      \endverb
+      \verb{url}
+      \verb https://lemire.me/notesdecours/entrepot/semaine5.html
+      \endverb
+    \endentry
+    \entry{ACM}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=98befce01145d7344d11f9c62411b327}{%
+           family={O'Neil},
+           familyi={O\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3ac82f3cec35774ba19e71f90421c83b}{%
+           family={O'Neil},
+           familyi={O\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod}}}%
+        {{hash=5677ac8ae42c9ccf46205616b3bb76cd}{%
+           family={Pal},
+           familyi={P\bibinitperiod},
+           given={Shankar},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6687bd8340fa774f1cd82d02fe2bd038}{%
+           family={Cseri},
+           familyi={C\bibinitperiod},
+           given={Istvan},
+           giveni={I\bibinitperiod}}}%
+        {{hash=c2692a2223cab127d8f2ef555bfa3653}{%
+           family={Schaller},
+           familyi={S\bibinitperiod},
+           given={Gideon},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d44a98c581a0072395d84961a38cda98}{%
+           family={Westbury},
+           familyi={W\bibinitperiod},
+           given={Nigel},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paris, France}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{6c723000426555765f1c27da3abd836d}
+      \strng{fullhash}{29e8e0406bfaa12fed8952bb93578bd4}
+      \strng{fullhashraw}{29e8e0406bfaa12fed8952bb93578bd4}
+      \strng{bibnamehash}{6c723000426555765f1c27da3abd836d}
+      \strng{authorbibnamehash}{6c723000426555765f1c27da3abd836d}
+      \strng{authornamehash}{6c723000426555765f1c27da3abd836d}
+      \strng{authorfullhash}{29e8e0406bfaa12fed8952bb93578bd4}
+      \strng{authorfullhashraw}{29e8e0406bfaa12fed8952bb93578bd4}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We introduce a hierarchical labeling scheme called ORDPATH that is implemented in the upcoming version of Microsoft® SQL Server™. ORDPATH labels nodes of an XML tree without requiring a schema (the most general case---a schema simplifies the problem). An example of an ORDPATH value display format is "1.5.3.9.1". A compressed binary representation of ORDPATH provides document order by simple byte-by-byte comparison and ancestry relationship equally simply. In addition, the ORDPATH scheme supports insertion of new nodes at arbitrary positions in the XML tree, their ORDPATH values "careted in" between ORDPATHs of sibling nodes, without relabeling any old nodes.}
+      \field{booktitle}{Proceedings of the 2004 ACM SIGMOD International Conference on Management of Data}
+      \field{isbn}{1581138598}
+      \field{series}{SIGMOD '04}
+      \field{title}{ORDPATHs: insert-friendly XML node labels}
+      \field{year}{2004}
+      \field{pages}{903\bibrangedash 908}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1145/1007568.1007686
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/1007568.1007686
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/1007568.1007686
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

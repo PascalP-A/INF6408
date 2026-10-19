@@ -1,17 +1,21 @@
 \documentclass{article}
 \usepackage{graphicx}
-\graphicspath{{Figure/}}
+\usepackage{biblatex} % Allow use of BibTeX for bibliography management
+\usepackage{notoccite}
 \usepackage{amsmath}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry} % Set page size and margins
+\graphicspath{{Figure/}}
+
 \numberwithin{equation}{section} % Will include section number in equation number as X.Y
-\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
-\bibliography{Bibliographie}
+
+
 \renewcommand{\contentsname}{Table des matières} %Allow to change "Content" to "Table des matières"
 
 % Document metadata and general information
 \title{Travail noté sur les vues et l'indexation}
 \author{Pascal Perron-Abran}
 \date{\today}
-\bibliographystyle{ieeetr}
+\bibliography{bibliographie}
 
 %Start of the document
 \begin{document}
@@ -87,4 +91,6 @@ Par conséquent, l'orientation \textit{colonne} nous permet de charger moins de 
 
 De plus, nous pouvons optimiser les performances de l'orientation colonne en triant les données selon la colonne ayant le moins de valeurs possible (faible cardinalité). Dans notre cas, ce tri serait basé sur la colonne \textit{Province}. Nous pourrions ensuite procéder au codage par plage. En reprenant l'exemple de la question d'approfondissement \cite{Lemire_2026}, et considérant que la colonne \textit{Mois} a douze valeurs possibles, la colonne \textit{Année}, seize, et la colonne \textit{Province}, dix, notre pire scénario contiendrait 10 x 12 x 16 = 1 920 plages. 
 
+\newpage
+\printbibliography
 \end{document}
