@@ -4,11 +4,11 @@
 \usepackage{amsmath}
 \numberwithin{equation}{section} % Will include section number in equation number as X.Y
 \usepackage[letterpaper, total={6.5in, 9in}]{geometry}
-\bibliography{Bibliography}
+\bibliography{Bibliographie}
 \renewcommand{\contentsname}{Table des matières} %Allow to change "Content" to "Table des matières"
 
 % Document metadata and general information
-\title{INF6804}
+\title{Travail noté sur les vues et l'indexation}
 \author{Pascal Perron-Abran}
 \date{\today}
 \bibliographystyle{ieeetr}
@@ -17,7 +17,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-    Ce travail a été préparé dans le cadre du cours INF6408 - . L'objectif est de (quoi). Comme objectif individuel, nous avons aussi décidé de travailler nos aptitudes LaTeX.
+    Ce travail a été préparé dans le cadre du cours INF6408 - Informatique de l'analyse multidimensionnelle. L'objectif est de développer la compréhension de l'indexation, principalement les index bitmap et la representation ORDPATH pour un fichier XML. Comme objectif individuel, nous avons aussi décidé de travailler nos aptitudes \LaTeX{} et Github.
 \end{abstract}
 
 \newpage
@@ -32,7 +32,7 @@ Pour la première colonne, nous devons donc créer un bitmap par mois, pour un t
 Dans ce scénario, 38 bitmaps seront créés.
 
 \section{Question 2}
-La représentation ORDPATH, est une représentation hiérarchique des étiquettes XML. Lors de la création de cette représentation, seuls les entiers impairs seront utilisés afin de permettre l'insertions de nouveaux éléments lorsque nécessaire (O'Neil, et al., 2004)
+La représentation ORDPATH, est une représentation hiérarchique des étiquettes XML. Lors de la création de cette représentation, seuls les entiers impairs seront utilisés afin de permettre l'insertions de nouveaux éléments lorsque nécessaire \cite{ACM}
     \begin{figure}[!ht]
         \centering
         \includegraphics[width=0.75\textwidth]{hierarchical}
@@ -63,7 +63,7 @@ La représentation ORDPATH, est une représentation hiérarchique des étiquette
     \end{table}
     
 \section{Question 3}
-Considérons que la base de données de la question 1 contienne \textit{n} enregistrements, est organisée en \textit{m = 3} colonnes et que chaque valeur est stockée dans un registre de taille \textit{s}. Si elle est organisée en \textit{rangée}, et que nous voulons faire une recherche sur \textit{k} colonne, tel que \textit{k $\leq$ 3}, nous pouvons utiliser l'équation \ref{eq:size_row} pour calculer la taille des données chargées \cite{ACM}.
+Considérons que la base de données de la question 1 contienne \textit{n} enregistrements, est organisée en \textit{m = 3} colonnes et que chaque valeur est stockée dans un registre de taille \textit{s}. Si elle est organisée en \textit{rangée}, et que nous voulons faire une recherche sur \textit{k} colonne, tel que \textit{k $\leq$ 3}, nous pouvons utiliser l'équation \ref{eq:size_row} pour calculer la taille des données chargées \cite{Lee_2026}.
 
 \begin{equation}
     D_{rang\acute{e}e} = n \cdot s \cdot m
@@ -85,6 +85,6 @@ Par conséquent, l'orientation \textit{colonne} nous permet de charger moins de 
 
 
 
-De plus, nous pouvons optimiser les performances de l'orientation colonne en triant les données selon la colonne ayant le moins de valeurs possible (faible cardinalité). Dans notre cas, ce tri serait basé sur la colonne \textit{Province}. Nous pourrions ensuite procéder au codage par plage. En reprenant l'exemple de la question d'approfondissement, et considérant que la colonne \textit{Mois} a douze valeurs possibles, la colonne \textit{Année}, seize, et la colonne \textit{Province}, dix, notre pire scénario contiendrait 10 x 12 x 16 = 1 920 plages. 
+De plus, nous pouvons optimiser les performances de l'orientation colonne en triant les données selon la colonne ayant le moins de valeurs possible (faible cardinalité). Dans notre cas, ce tri serait basé sur la colonne \textit{Province}. Nous pourrions ensuite procéder au codage par plage. En reprenant l'exemple de la question d'approfondissement \cite{Lemire_2026}, et considérant que la colonne \textit{Mois} a douze valeurs possibles, la colonne \textit{Année}, seize, et la colonne \textit{Province}, dix, notre pire scénario contiendrait 10 x 12 x 16 = 1 920 plages. 
 
 \end{document}
