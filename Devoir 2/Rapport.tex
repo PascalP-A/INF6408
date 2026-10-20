@@ -4,10 +4,14 @@
 \usepackage{notoccite}
 \usepackage{amsmath}
 \usepackage[letterpaper, total={6.5in, 9in}]{geometry} % Set page size and margins
-\graphicspath{{Figure/}}
 
+%Declare path for figures and set equation numbering to include section number
+\graphicspath{{Figure/}}
 \numberwithin{equation}{section} % Will include section number in equation number as X.Y
 
+%Set paragraph spacing and indentation
+\setlength{\parskip}{12pt} % Adds 12pt space between paragraphs
+\setlength{\parindent}{0pt} % Removes paragraph indentation
 
 \renewcommand{\contentsname}{Table des matières} %Allow to change "Content" to "Table des matières"
 
@@ -21,7 +25,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-    Ce travail a été préparé dans le cadre du cours INF6408 - Informatique de l'analyse multidimensionnelle. L'objectif est de développer la compréhension de l'indexation, principalement les index bitmap et la representation ORDPATH pour un fichier XML. Comme objectif individuel, nous avons aussi décidé de travailler nos aptitudes \LaTeX{} et Github.
+    Ce travail a été préparé dans le cadre du cours INF6408 - Informatique de l'analyse multidimensionnelle. L'objectif est de développer la compréhension de l'indexation, principalement les index bitmap et la représentation ORDPATH pour un fichier XML. Comme objectif individuel, nous avons aussi décidé de travailler nos aptitudes \LaTeX{} et Github.
 \end{abstract}
 
 \newpage
@@ -29,6 +33,8 @@
 
 \newpage
 
+\section{Déclaration sur l'utilisation de l'IA}
+Dans le cadre de ce projet, nous avons utilisé l'IA Github Copilot pour nous aider à rédiger le code \LaTeX{} de ce rapport et pour générer les commentaires du code. Aucune IA n'a été utilisée pour répondre aux questions du devoir, ni pour générer les figures et tableaux.
 
 \section{Question 1}
 Pour la première colonne, nous devons donc créer un bitmap par mois, pour un total de 12 bitmaps. Dans la deuxième colonne, 16 bitmaps et, pour la troisième colonne, dix bitmaps.
@@ -36,7 +42,7 @@ Pour la première colonne, nous devons donc créer un bitmap par mois, pour un t
 Dans ce scénario, 38 bitmaps seront créés.
 
 \section{Question 2}
-La représentation ORDPATH, est une représentation hiérarchique des étiquettes XML. Lors de la création de cette représentation, seuls les entiers impairs seront utilisés afin de permettre l'insertions de nouveaux éléments lorsque nécessaire \cite{ACM}
+La représentation ORDPATH, est une représentation hiérarchique des étiquettes XML. Lors de la création de cette représentation, seuls les entiers impairs seront utilisés afin de permettre l'insertions de nouveaux éléments lorsque nécessaire \cite{ACM}.
     \begin{figure}[!ht]
         \centering
         \includegraphics[width=0.75\textwidth]{hierarchical}
@@ -62,12 +68,13 @@ La représentation ORDPATH, est une représentation hiérarchique des étiquette
                 \hline
             \end{tabular}
         \end{center}
-        \caption{Representation ORDPATH d'un document XML}
+        \caption{Représentation ORDPATH d'un document XML}
         \label{table:ordpath}
     \end{table}
     
+\newpage
 \section{Question 3}
-Considérons que la base de données de la question 1 contienne \textit{n} enregistrements, est organisée en \textit{m = 3} colonnes et que chaque valeur est stockée dans un registre de taille \textit{s}. Si elle est organisée en \textit{rangée}, et que nous voulons faire une recherche sur \textit{k} colonne, tel que \textit{k $\leq$ 3}, nous pouvons utiliser l'équation \ref{eq:size_row} pour calculer la taille des données chargées \cite{Lee_2026}.
+Considérons que la base de données de la question 1 contienne \textit{n} enregistrements, est organisée en \textit{m = 3} colonnes et que chaque valeur est stockée dans un registre de taille \textit{s} octets. Si elle est organisée en \textit{rangée}, et que nous voulons faire une recherche sur \textit{k} colonne, tel que \textit{k $\leq$ 3}, nous pouvons utiliser l'équation \ref{eq:size_row} pour calculer la taille des données chargées \cite{Lee_2026}.
 
 \begin{equation}
     D_{rang\acute{e}e} = n \cdot s \cdot m
@@ -75,7 +82,7 @@ Considérons que la base de données de la question 1 contienne \textit{n} enreg
 \end{equation}
 
 
-Si nous avons la même base de données orientée \textit{colonne} et que nous voulons faire la même requête sur \textit{k} colonnes, la taille des données chargées peut etre obtenue par l'équation \ref{eq:size_col} (ibid.). Il est intéressant de noter que, en combinant les équations \ref{eq:size_row} et \ref{eq:size_col}, nous trouvons que le ratio entre la taille des données chargées ne dépend que du ratio k/m (voir l'équation \ref{eq:ratio}).
+Si nous avons la même base de données orientée \textit{colonne} et que nous voulons faire la même requête sur \textit{k} colonnes, la taille des données chargées peut être obtenue par l'équation \ref{eq:size_col} (ibid.). Il est intéressant de noter que, en combinant les équations \ref{eq:size_row} et \ref{eq:size_col}, nous trouvons que le ratio entre la taille des données chargées ne dépend que du ratio k/m (voir l'équation \ref{eq:ratio}).
 \begin{equation}
     D_{colonne} = n \cdot s \cdot k
     \label{eq:size_col}
@@ -85,9 +92,8 @@ Si nous avons la même base de données orientée \textit{colonne} et que nous v
     \frac{D_{colonne}}{D_{rang\acute{e}e}} = \frac{n \cdot s \cdot k}{n \cdot s \cdot m} = \frac{k}{m}
     \label{eq:ratio}
 \end{equation}
-Par conséquent, l'orientation \textit{colonne} nous permet de charger moins de données que l'orientation \textit{rangée}, tant que le nombre de colonne sur lesquelles nous faisons une requête est de $k \leq 2$ et, si $k=m$, les deux orientations auront la même performance.
-
-
+Par conséquent, l'orientation \textit{colonne} nous permet de charger moins de données que l'orientation
+\textit{rangée}, tant que le nombre de colonne sur lesquelles nous faisons une requête est de $k \leq 2$ et, si $k=m$, les deux orientations auront la même performance.
 
 De plus, nous pouvons optimiser les performances de l'orientation colonne en triant les données selon la colonne ayant le moins de valeurs possible (faible cardinalité). Dans notre cas, ce tri serait basé sur la colonne \textit{Province}. Nous pourrions ensuite procéder au codage par plage. En reprenant l'exemple de la question d'approfondissement \cite{Lemire_2026}, et considérant que la colonne \textit{Mois} a douze valeurs possibles, la colonne \textit{Année}, seize, et la colonne \textit{Province}, dix, notre pire scénario contiendrait 10 x 12 x 16 = 1 920 plages. 
 
